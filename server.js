@@ -12,7 +12,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:3001', // for local development
+    'https://www.prestigedreamdecor.in' // your Vercel frontend
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 
