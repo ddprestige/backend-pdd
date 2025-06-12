@@ -5,7 +5,7 @@ const Admin = require('../models/admin');
 const router = express.Router();
 
 // Secret Key
-const JWT_SECRET = process.env.JWT_SECRET || 'yourSecretKey';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Register Admin (Run once or secure this route)
 router.post('/register', async (req, res) => {
@@ -30,7 +30,7 @@ router.post('/login', async (req, res) => {
   // ✅ Set HTTP-only cookie
   res.cookie('token', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // only over HTTPS
+    secure: process.env.NODE_ENV === 'production', 
     sameSite: 'strict',
     maxAge: 3600000, // 1 hour
   });
