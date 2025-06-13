@@ -1,6 +1,6 @@
 import express from 'express';
 import upload from '../middleware/multer.js'; 
-import authMiddleware from '../middleware/authmiddleware.js'; // ✅ Correct path with .js
+
 import {
   createProduct,
   getAllProducts,
