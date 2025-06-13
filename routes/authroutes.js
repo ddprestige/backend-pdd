@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
 });
 
 // Login
-router.post('/login', async (req, res) => {
+router.post('/login/user', async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
 
 
 // Me (check auth)
-router.get('/me', async (req, res) => {
+router.get('/user/me', async (req, res) => {
   const token = req.cookies.token;
   if (!token) return res.status(401).json({ message: 'Not authenticated' });
 

@@ -8,10 +8,11 @@ import authRoutes from './routes/authroutes.js';
 import notifyRoutes from './routes/notify.js';
 import contactRoute from './routes/contact.js';
 
+const app = express();
+
 dotenv.config();
 connectDB();
 
-const app = express();
 
 // ✅ Setup CORS properly
 const allowedOrigins = [
