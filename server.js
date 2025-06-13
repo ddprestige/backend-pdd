@@ -4,7 +4,7 @@ import cors from 'cors';
 import connectDB from './config/db.js';
 import productRoutes from './routes/productroutes.js';
 import cookieParser from 'cookie-parser';
-import authRoutes from './routes/authroutes.js';
+import authRoutes from './routes/admin.js';
 import notifyRoutes from './routes/notify.js';
 import contactRoute from './routes/contact.js';
 
