@@ -8,7 +8,7 @@ const router = express.Router();
 // Secret Key
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// Register Admin (Run once or secure this route)
+
 router.post('/register', async (req, res) => {
   try {
     const { email, password } = req.body;
